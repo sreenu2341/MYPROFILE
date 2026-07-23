@@ -1,0 +1,490 @@
+/* ==========================
+   Google Font & Reset
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(135deg,#0f172a,#1e3a8a,#2563eb);
+    color:#fff;
+}
+
+/* ==========================
+   Main Container
+========================== */
+
+.main-container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* ==========================
+   Hero Section
+========================== */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+/* ==========================
+   Hero Left Content
+========================== */
+
+.hero-left{
+    flex:1;
+}
+
+.hero-left h4{
+    font-size:22px;
+    color:#93c5fd;
+    margin-bottom:10px;
+}
+
+.hero-left h1{
+    font-size:60px;
+    color:#ffffff;
+    margin-bottom:15px;
+}
+
+.hero-left h3{
+    font-size:28px;
+    color:#38bdf8;
+    margin-bottom:20px;
+}
+
+.hero-left p{
+    font-size:17px;
+    line-height:1.8;
+    color:#e5e7eb;
+    max-width:550px;
+}
+
+/* ==========================
+   Buttons
+========================== */
+
+.buttons{
+    margin-top:30px;
+}
+
+.btn,
+.btn2{
+    display:inline-block;
+    padding:12px 28px;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:600;
+    margin-right:15px;
+    transition:0.3s ease;
+}
+
+.btn{
+    background:#38bdf8;
+    color:#000;
+}
+
+.btn:hover{
+    background:#ffffff;
+    color:#000;
+}
+
+.btn2{
+    border:2px solid #38bdf8;
+    color:#fff;
+}
+
+.btn2:hover{
+    background:#38bdf8;
+    color:#000;
+}
+
+/* ==========================
+   Profile Image
+========================== */
+
+.hero-right{
+    flex:1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.hero-right img{
+    width:300px;
+    height:300px;
+    border-radius:50%;
+    object-fit:cover;
+    border:6px solid #38bdf8;
+    box-shadow:0 0 25px rgba(56,189,248,0.6);
+    transition:0.3s;
+}
+
+.hero-right img:hover{
+    transform:scale(1.05);
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media(max-width:768px){
+
+.hero{
+    flex-direction:column-reverse;
+    text-align:center;
+    padding-top:50px;
+}
+
+.hero-left h1{
+    font-size:42px;
+}
+
+.hero-left h3{
+    font-size:22px;
+}
+
+.hero-right img{
+    width:220px;
+    height:220px;
+}
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+}
+
+/* ==========================
+   Profile Image
+========================== */
+
+.hero-right{
+    flex:1;
+    text-align:center;
+}.hero-right img{
+    width:250px;
+    height:300px;
+    object-fit:cover;
+    border-radius:0;   /* No round corners */
+    border:5px solid #38bdf8;
+    box-shadow:0 10px 25px rgba(0,0,0,0.4);
+    display:block;
+}
+
+
+
+/* ==========================
+   Section Titles
+========================== */
+
+section{
+    padding:30px 0;
+}
+
+section h2{
+    text-align:center;
+    font-size:38px;
+    margin-bottom:40px;
+    color:#38bdf8;
+}
+
+/* About + Skills */
+
+.about-skills{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:35px;
+    margin:70px 0;
+}
+
+/* About Card */
+
+.about-card-box,
+.skills-card-box{
+
+    background:rgba(255,255,255,.10);
+    backdrop-filter:blur(12px);
+    border-radius:20px;
+    padding:30px;
+    box-shadow:0 8px 20px rgba(0,0,0,.3);
+
+}
+
+.about-card{
+
+    text-align:center;
+
+}
+
+.about-card img{
+
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid #38bdf8;
+    margin-bottom:20px;
+
+}
+
+.about-card h3{
+
+    color:#38bdf8;
+    margin-bottom:15px;
+
+}
+
+.about-card p{
+
+    line-height:1.8;
+    color:#eee;
+}
+
+/* Skills */
+
+.skills-grid{
+
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+
+}
+
+.skill-card{
+
+    background:#ffffff15;
+    border-radius:15px;
+    padding:20px;
+    text-align:center;
+    transition:.3s;
+
+}
+
+.skill-card:hover{
+
+    background:#38bdf8;
+    color:#000;
+    transform:translateY(-8px);
+
+}
+
+.skill-card i{
+
+    font-size:40px;
+    margin-bottom:10px;
+    color:#38bdf8;
+
+}
+
+.skill-card:hover i{
+
+    color:#000;
+
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.about-skills{
+
+    grid-template-columns:1fr;
+
+}
+
+.skills-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+/* ==========================
+   Projects Section
+========================== */
+
+.project-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.project-card{
+    background:rgba(255,255,255,.12);
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    transition:0.4s;
+    box-shadow:0 8px 20px rgba(0,0,0,.3);
+}
+
+.project-card:hover{
+    transform:translateY(-10px);
+    background:#38bdf8;
+    color:#000;
+}
+
+.project-card i{
+    font-size:45px;
+    margin-bottom:15px;
+}
+
+.project-card h3{
+    margin-bottom:15px;
+}
+
+/* ==========================
+   Internship & Education
+========================== */
+
+.info-card{
+    background:rgba(255,255,255,.12);
+    padding:35px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 8px 20px rgba(0,0,0,.3);
+}
+
+.info-card i{
+    font-size:50px;
+    color:#38bdf8;
+    margin-bottom:20px;
+}
+
+.info-card h3{
+    margin-bottom:15px;
+}
+
+/* ==========================
+   Hobbies
+========================== */
+
+.hobby-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.hobby-card{
+    background:rgba(255,255,255,.12);
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    transition:.4s;
+}
+
+.hobby-card:hover{
+    transform:scale(1.05);
+    background:#38bdf8;
+    color:#000;
+}
+
+.hobby-card i{
+    font-size:40px;
+    margin-bottom:15px;
+}
+
+/* ==========================
+   Contact
+========================== */
+
+.contact-card{
+    background:rgba(255,255,255,.12);
+    padding:35px;
+    border-radius:20px;
+    text-align:center;
+    line-height:2.2;
+    font-size:18px;
+    box-shadow:0 8px 20px rgba(0,0,0,.3);
+}
+
+.contact-card i{
+    color:#38bdf8;
+    margin-right:10px;
+}
+
+/* ==========================
+   Footer
+========================== */
+
+footer{
+    text-align:center;
+    padding:40px 20px;
+    margin-top:60px;
+    border-top:1px solid rgba(255,255,255,.2);
+}
+
+footer h3{
+    color:#38bdf8;
+    margin-bottom:10px;
+}
+
+footer p{
+    margin:8px 0;
+}
+
+.copy{
+    font-size:14px;
+    color:#d1d5db;
+}
+
+/* ==========================
+   Responsive Design
+========================== */
+
+@media(max-width:768px){
+
+.hero{
+    flex-direction:column-reverse;
+    text-align:center;
+    padding-top:40px;
+}
+
+.hero-left h1{
+    font-size:40px;
+}
+
+.hero-right img{
+    width:220px;
+    height:220px;
+}
+
+.buttons{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.btn,
+.btn2{
+    margin:0;
+}
+
+section h2{
+    font-size:30px;
+}
+
+.about-card,
+.contact-card,
+.info-card,
+.skill-card,
+.project-card,
+.hobby-card{
+    padding:20px;
+}
+
+}
